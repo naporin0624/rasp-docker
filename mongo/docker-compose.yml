@@ -20,6 +20,10 @@ services:
     restart: always
     ports:
       - 8888:8081
+    environment:
+        ME_CONFIG_SITE_BASEURL: /mongo-express
+        ME_CONFIG_BASICAUTH_USERNAME: napochaan
+        ME_CONFIG_BASICAUTH_PASSWORD: Nap0r1tan
     networks:
       - mongo-compose-network
 networks:

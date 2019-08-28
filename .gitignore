@@ -1,1 +1,3 @@
 /mongo/mongo/data/
+/nginx/server.crt
+/nginx/server.key
