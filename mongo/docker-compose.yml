@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  mongo:
+    image: nonoroazoro/rpi-mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - 27017:27017
+      - 27018:27018
+    volumes:
+      - ./mongo/data:/data/db
+      - ./mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    networks:
+      - mongo-compose-network
+
+  mongo-express:
+    image: ind3x/rpi-mongo-express 
+    container_name: mongo-express
+    restart: always
+    ports:
+      - 8888:8081
+    networks:
+      - mongo-compose-network
+networks:
+  mongo-compose-network:
+    driver: bridge
+
