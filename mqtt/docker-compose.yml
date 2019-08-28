@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    mqtt:
+        image: pascaldevink/rpi-mosquitto
+        container_name: mqtt
+        ports:
+            - 1883:1883
+            - 9001:9001
+
