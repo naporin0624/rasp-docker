@@ -2,3 +2,4 @@
 /nginx/server.crt
 /nginx/server.key
 /nginx/basic
+*/dist/
